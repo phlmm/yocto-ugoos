@@ -1,4 +1,0 @@
-Images types available (in addition of standard Poky/OE images) :
- - ugoos-kodi  
- - ugoos-kodi-dbg  
-
