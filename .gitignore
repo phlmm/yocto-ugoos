@@ -1,0 +1,12 @@
+/.repo
+/.repo/**
+/shared
+/shared/**
+/build
+/build/**
+/sources
+/sources/**
+/downloads
+/downloads/**
+/sstate-cache
+/sstate-cache/**
