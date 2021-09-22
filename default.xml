@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="yocto-project"  fetch="git://git.yoctoproject.org"/>
+  <remote name="kodi"  fetch="https://github.com/koenkooi"/>
+  <remote name="meson"  fetch="https://github.com/superna9999"/>
+  <remote name="oe"  fetch="git://git.openembedded.org"/>
+  <remote name="ugoos"  fetch="https://github.com/phlmm"/>
+
+  <default sync-j="4"/>
+
+  <project remote="ugoos" revision="master" name="meta-ugoos" path="repo-tmp/meta-ugoos">
+	  <copyfile src="scripts/ugoos-init.sh" dest="ugoos-init"/>
+	  <linkfile src="repo-tmp/meta-ugoos/layer-sources/meta-ugoos" dest="sources/mega-ugoos"/>
+  </project>
+
+  <project remote="yocto-project"  revision="hardknott"      name="poky"                     path="sources/core"/>
+  <project remote="oe"  revision="hardknott-next"      name="meta-openembedded"               path="sources/meta-openembedded"/>
+  <project remote="meson"  revision="hardknott-next"      name="meta-meson"               path="sources/meta-meson"/>
+  <project remote="kodi"  revision="master-next"      name="meta-kodi"               path="sources/meta-kodi"/>
+
+</manifest>
