@@ -3,14 +3,14 @@
 echo 
 echo "Use SRC_DIR=\$PATH_TO_REPOS to add shared repos with docker"
 echo "i.e. SRC_DIR=../../gitrepos ./poky_dev_shell"
-echo "Further adding DEV_SRC=1 to in poky sell will force the internal recipes to use /src/* instead of AWS"
+echo "Further adding DEV_SRC=1 to in poky sell will force the internal recipes to use /src/* "
 echo "i.e. DEV_SRC=1 bitbake es-python-modules"
 echo "This would use by default BRANCH=develop with repo /src/\$REPO"
 echo 
 
 CONT_NAME="crops/poky"
 CUR_DIR=`realpath .`
-HOST_SHARED_DIR=${CUR_DIR}
+HOST_SHARED_DIR=${CUR_DIR}/shared
 
 if [[ -z "${SRC_DIR}" ]]; then
   SHARED_SRC_CMD=""
@@ -19,7 +19,7 @@ else
   SHARED_SRC_CMD="-v ${SRC_DIR}:/src"
 fi
 MACH="ugoos-am6"
-DISTR="poky"
+DISTR=""
 TOOLCHAIN_DIR=""
 
 DOCKER_EXEC="source ugoos-init;export TOOLCHAIN_BASE=${TOOLCHAIN_DIR}; \

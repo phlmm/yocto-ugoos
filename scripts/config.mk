@@ -33,9 +33,9 @@ BB_CMD ?= bitbake
 CONT_NAME ?= "crops/poky"
 HOST_SHARED_DIR ?= $(PWD)/shared
 DOCKER_RUN ?= docker run --rm -it --network host \
-		-v $(HOST_SHARED_DIR):/workdir $(CONT_NAME) --workdir=/workdir
-DOCKER_EXEC ?= /bin/bash -c "source /workdir/ugoos-init; git config --global  \
-		credential.helper 'store --file /workdir/.git-credentials';
+		-v $(HOST_SHARED_DIR):/work $(CONT_NAME) --workdir=/work
+DOCKER_EXEC ?= /bin/bash -c "source /work/ugoos-init; git config --global  \
+		credential.helper 'store --file /work/.git-credentials';
 DOCKER_EXEC_END ?= ";
 
 #################################################################################
