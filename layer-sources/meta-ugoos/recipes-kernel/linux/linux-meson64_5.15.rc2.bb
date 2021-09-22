@@ -3,15 +3,17 @@
 #
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRCREV = "66a613c5173456fe0edfa1a89147381d2802d4e4"
-BRANCH = "linux-5.14.y"
-URI="git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git"
+SRCREV = "${AUTOREV}"
+BRANCH = "master"
+URI_STABLE="git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git"
+URI_MASTER="git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/"
+URI="${URI_MASTER}"
 PROTOCOL="https"
 
 
 DEPENDS += "rsync-native"
 
-LINUX_VERSION = "5.14.1"
+LINUX_VERSION = "5.15-rc2"
 	
 # Linux stable tree
 SRC_URI_ugoos-am6 = "git://${URI};protocol=${PROTOCOL};branch=${BRANCH} \
