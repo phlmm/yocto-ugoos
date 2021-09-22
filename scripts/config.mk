@@ -34,7 +34,7 @@ CONT_NAME ?= "crops/poky"
 HOST_SHARED_DIR ?= $(PWD)/shared
 DOCKER_RUN ?= docker run --rm -it --network host \
 		-v $(HOST_SHARED_DIR):/workdir $(CONT_NAME) --workdir=/workdir
-DOCKER_EXEC ?= /bin/bash -c "source /workdir/setupsdk; git config --global  \
+DOCKER_EXEC ?= /bin/bash -c "source /workdir/ugoos-init; git config --global  \
 		credential.helper 'store --file /workdir/.git-credentials';
 DOCKER_EXEC_END ?= ";
 

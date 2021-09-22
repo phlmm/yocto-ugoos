@@ -13,7 +13,7 @@
 	  <linkfile src="layer-sources/meta-ugoos" dest="sources/meta-ugoos"/>
   </project>
 
-  <project remote="yocto-project"  revision="hardknott"      name="poky"                     path="sources/core"/>
+  <project remote="yocto-project"  revision="hardknott"      name="poky"                     path="sources/poky"/>
   <project remote="oe"  revision="hardknott-next"      name="meta-openembedded"               path="sources/meta-openembedded"/>
   <project remote="meson"  revision="hardknott-next"      name="meta-meson"               path="sources/meta-meson"/>
   <project remote="kodi"  revision="master-next"      name="meta-kodi"               path="sources/meta-kodi"/>
