@@ -14,9 +14,9 @@ KODI_RELEASE ?= "master-next"
 #################################################################################
 # Yocto settings
 #################################################################################
-DISTRO ?= ""
+DISTRO ?= "poky"
 MACHINE ?= "ugoos-am6"
-IMAGE ?= ""
+IMAGE ?= "ugoos-kodi"
 DEPLOY_PATH = shared/build/tmp/deploy/images/$(MACHINE)/
 MACHINE_LIST = "ugoos-am6"
 DISTRO_LIST = "poky'

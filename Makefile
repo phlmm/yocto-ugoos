@@ -44,22 +44,16 @@ all: .do_create_structure .do_repo_checkout debug_image release_image sdk sdk_fu
 debug_image: .do_repo_checkout ## Builds the debug image (profiling, debugging and compiling tools, unstripped packages)
 	@echo "$(RED)Starting debug image integration: $(RESET)"
 	@echo "${BLACK}-----------------------------------------------------------------------------${RESET}"
-	$(call build, \
-		@$(DOCKER_RUN) $(DOCKER_EXEC) MACHINE=$(MACHINE) DISTRO=$(DISTRO) \
-		$(BB_CMD) $(IMAGE)-dbg $(DOCKER_EXEC_END), \
-		$@_build.log, \
-		$(HL)$@$(NC) taget)
+	@$(DOCKER_RUN) $(DOCKER_EXEC) MACHINE=$(MACHINE) DISTRO=$(DISTRO) \
+	$(BB_CMD) $(IMAGE)-dbg $(DOCKER_EXEC_END), \
 	@echo "$(GREEN)Build artifacts are in $(DEPLOY_PATH)$(RESET)" \
 	&& touch $@
 
 release_image: .do_repo_checkout ## Builds the release (stripped down) image
 	@echo "$(RED)Starting release image integration $(RESET)"
 	@echo "${BLACK}-----------------------------------------------------------------------------${RESET}"
-	$(call build, \
-		@$(DOCKER_RUN) $(DOCKER_EXEC) MACHINE=$(MACHINE) DISTRO=$(DISTRO) \
-		$(BB_CMD) $(IMAGE) $(DOCKER_EXEC_END), \
-		$@_build.log, \
-		$(HL)$@$(NC) taget)
+	@$(DOCKER_RUN) $(DOCKER_EXEC) MACHINE=$(MACHINE) DISTRO=$(DISTRO) \
+	$(BB_CMD) $(IMAGE) $(DOCKER_EXEC_END)
 	@echo "$(GREEN)Build artifacts are in $(DEPLOY_PATH)$(RESET)" \
 	&& touch $@
 

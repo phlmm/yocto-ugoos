@@ -1,4 +1,4 @@
-DESCRIPTION = "A SD/MMC Image for Amlogic Meson SoCs with embedded kernel on the filesystem"
+DESCRIPTION = "A SD Image UGOOS AM6"
 
 IMAGE_FEATURES += "ssh-server-openssh package-management hwcodecs"
 
