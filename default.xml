@@ -8,9 +8,9 @@
 
   <default sync-j="4"/>
 
-  <project remote="ugoos" revision="master" name="meta-ugoos" path="repo-tmp/meta-ugoos">
-	  <copyfile src="scripts/ugoos-init.sh" dest="ugoos-init"/>
-	  <linkfile src="repo-tmp/meta-ugoos/layer-sources/meta-ugoos" dest="sources/mega-ugoos"/>
+  <project remote="ugoos" revision="master" name="meta-ugoos" path="repo-tmp">
+	  <copyfile src="scripts/init-ugoos.sh" dest="ugoos-init"/>
+	  <linkfile src="layer-sources/meta-ugoos" dest="sources/meta-ugoos"/>
   </project>
 
   <project remote="yocto-project"  revision="hardknott"      name="poky"                     path="sources/core"/>
