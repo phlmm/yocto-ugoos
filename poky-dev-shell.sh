@@ -19,7 +19,7 @@ else
   SHARED_SRC_CMD="-v ${SRC_DIR}:/src"
 fi
 MACH="ugoos-am6"
-DISTR=""
+DISTR="poky-bleeding"
 TOOLCHAIN_DIR=""
 
 DOCKER_EXEC="source ugoos-init;export TOOLCHAIN_BASE=${TOOLCHAIN_DIR}; \
