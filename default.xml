@@ -8,14 +8,14 @@
 
   <default sync-j="4"/>
 
-  <project remote="ugoos" revision="master" name="yocto-ugoos" path="repo-tmp">
+  <project remote="ugoos" revision="master-next" name="yocto-ugoos" path="repo-tmp">
 	  <copyfile src="scripts/init-ugoos.sh" dest="ugoos-init"/>
   </project>
 
-  <project remote="ugoos"  revision="master"      name="meta-ugoos"                     path="sources/meta-ugoos"/>
-  <project remote="yocto-project"  revision="hardknott"      name="poky"                     path="sources/poky"/>
-  <project remote="oe"  revision="hardknott-next"      name="meta-openembedded"               path="sources/meta-openembedded"/>
-  <project remote="meson"  revision="hardknott-next"      name="meta-meson"               path="sources/meta-meson"/>
+  <project remote="ugoos"  revision="master-next"      name="meta-ugoos"                     path="sources/meta-ugoos"/>
+  <project remote="yocto-project"  revision="master"      name="poky"                     path="sources/poky"/>
+  <project remote="oe"  revision="master-next"      name="meta-openembedded"               path="sources/meta-openembedded"/>
+  <project remote="meson"  revision="master-dev"      name="meta-meson"               path="sources/meta-meson"/>
   <project remote="kodi"  revision="master-next"      name="meta-kodi"               path="sources/meta-kodi"/>
 
 </manifest>
