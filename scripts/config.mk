@@ -6,9 +6,9 @@ LAYERS_UGOOS ?= meta-ugoos
 LAYERS_OE ?= poky meta-openembedded
 LAYERS_KODI ?= meta-kodi 	
 
-OE_RELEASE ?= "hardknott-next"
-AMLOGIC_RELEASE ?= "hardknott-next"
-UGOOS_RELEASE ?= "master"
+OE_RELEASE ?= "master-next"
+AMLOGIC_RELEASE ?= "master-dev"
+UGOOS_RELEASE ?= "master-next"
 KODI_RELEASE ?= "master-next"
 
 #################################################################################
