@@ -14,12 +14,12 @@ KODI_RELEASE ?= "master-next"
 #################################################################################
 # Yocto settings
 #################################################################################
-DISTRO ?= "poky"
+DISTRO ?= "poky-bleeding"
 MACHINE ?= "ugoos-am6"
 IMAGE ?= "ugoos-kodi"
 DEPLOY_PATH = shared/build/tmp/deploy/images/$(MACHINE)/
 MACHINE_LIST = "ugoos-am6"
-DISTRO_LIST = "poky'
+DISTRO_LIST = "poky poky-bleeding'
 IMAGE_LIST = "$(IMAGE), $(IMAGE)-dbg"
 SDK_LIST = "yocto-toolchain full_sdk"
 #################################################################################
