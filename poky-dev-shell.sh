@@ -1,13 +1,5 @@
 #!/usr/bin/bash
 
-echo 
-echo "Use SRC_DIR=\$PATH_TO_REPOS to add shared repos with docker"
-echo "i.e. SRC_DIR=../../gitrepos ./poky_dev_shell"
-echo "Further adding DEV_SRC=1 to in poky sell will force the internal recipes to use /src/* "
-echo "i.e. DEV_SRC=1 bitbake es-python-modules"
-echo "This would use by default BRANCH=develop with repo /src/\$REPO"
-echo 
-
 CONT_NAME="crops/poky"
 CUR_DIR=`realpath .`
 HOST_SHARED_DIR=${CUR_DIR}/shared
